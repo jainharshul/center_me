@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More About Centered Divs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+        .interactive-demo, .possible-answers {
+            background-color: white;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .code-area, .preview-area {
+            margin-bottom: 20px;
+        }
+        .preview-area {
+            border: 1px solid #ddd;
+            padding: 20px;
+            min-height: 200px;
+            background-color: #f9f9f9;
+        }
+        textarea {
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .solution {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learn More About Centered Divs</h1>
+    <p>A centered div is a common design element in web development. It refers to a div element that is positioned in the center of its parent container, both horizontally and vertically.</p>
+    <p>Centering a div can be achieved through various CSS techniques, such as using flexbox, grid, or absolute positioning with transform.</p>
+    <p>In the interactive example you just experienced, you learned how to visually identify a centered div and how it differs from a non-centered position.</p>
+    
+    <div class="interactive-demo">
+        <h2>Try it yourself!</h2>
+        <p>Try centering the div by modifying the CSS in the .center-me class. Here are some techniques you can try:</p>
+        <ul>
+            <li>Using flexbox: <code>display: flex; justify-content: center; align-items: center;</code></li>
+            <li>Using grid: <code>display: grid; place-items: center;</code></li>
+            <li>Using absolute positioning: <code>position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);</code></li>
+        </ul>
+        <div class="code-area">
+            <textarea id="html-code" rows="15" cols="50">
+<div class="container">
+  <div class="center-me">Center this div</div>
+</div>
+
+<style>
+.container {
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+}
+.center-me {
+  /* Add your centering CSS here */
+}
+</style>
+            </textarea>
+        </div>
+        <button onclick="updatePreview()">Run Code</button>
+        <div id="preview" class="preview-area"></div>
+    </div>
+
+    <div class="possible-answers">
+        <h2>Possible Solutions</h2>
+        <p>Here are some ways to center the div using different CSS techniques:</p>
+        
+        <div class="solution">
+            <h3>Using Flexbox</h3>
+            <code>
+.center-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+            </code>
+        </div>
+
+        <div class="solution">
+            <h3>Using Grid</h3>
+            <code>
+.center-me {
+  display: grid;
+  place-items: center;
+}
+            </code>
+        </div>
+
+        <div class="solution">
+            <h3>Using Absolute Positioning</h3>
+            <code>
+.center-me {
+  position: relative;
+}
+.center-me {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+            </code>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">Back to Game</a>
+    
+    <script>
+        function updatePreview() {
+            const code = document.getElementById('html-code').value;
+            const preview = document.getElementById('preview');
+            preview.innerHTML = code;
+        }
+
+        // Initial preview
+        updatePreview();
+    </script>
+</body>
+</html>
