@@ -1,3 +1,4 @@
+## [Try it out](https://centering-divs.netlify.app/)
 ## Inspiration
 The inspiration behind "Center My Div" came from the need to visually demonstrate and interactively learn about centering elements in web design. Centering content is a common task, but the various methods of achieving it can be confusing for beginners. This project allows users to engage directly with the concept by interacting with a draggable element and centering it on their own.
 
